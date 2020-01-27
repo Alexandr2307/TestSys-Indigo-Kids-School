@@ -1,5 +1,6 @@
 package repo;
 
+import repo.pojo.AnswerPOJO;
 import repo.pojo.QuestionListPOJO;
 import repo.pojo.QuestionPOJO;
 import view.MainContract;
@@ -17,5 +18,10 @@ public class Repository implements MainContract.Repository {
     @Override
     public List<QuestionPOJO> getAllQuestions() {
         return repository.getAllQuestions();
+    }
+
+    @Override
+    public List<AnswerPOJO> getAllAnswer() {
+        return repository.getAllAnswer();
     }
 }
