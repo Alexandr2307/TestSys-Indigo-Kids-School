@@ -1,9 +1,8 @@
 package repo;
 
 import repo.pojo.AnswerPOJO;
-import repo.pojo.QuestionListPOJO;
 import repo.pojo.QuestionPOJO;
-import view.MainContract;
+import other.MainContract;
 
 import java.util.List;
 
@@ -16,12 +15,17 @@ public class Repository implements MainContract.Repository {
 
     }
     @Override
-    public List<QuestionPOJO> getAllQuestions() {
-        return repository.getAllQuestions();
+    public List<QuestionPOJO> loadQuestions() {
+        return repository.loadQuestions();
     }
 
     @Override
-    public List<AnswerPOJO> getAllAnswer() {
-        return repository.getAllAnswer();
+    public List<AnswerPOJO> loadAnswers() {
+        return repository.loadAnswers();
+    }
+
+    @Override
+    public void writeAnswer(String content) {
+        repository.writeAnswer(content);
     }
 }
